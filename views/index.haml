@@ -1,0 +1,108 @@
+- a,b,c = rand(255), rand(255), rand(255)
+%html
+  %head
+    %meta{ 'http-equiv' => "Content-Type", :content => "text/html; charset=UTF-8" }
+    %style
+      html {
+      background-color: transparent;
+      background-image: url(#{a.to_s}.png), url(#{b.to_s}.png), url(#{c.to_s}.png);
+      background-size: auto, auto, auto;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      }
+      body {
+      font-family: Georgia, serif;
+      }
+      a {
+      text-decoration: none;
+      }
+      a:hover {
+      text-decoration: underline;
+      }
+      ul {
+      list-style: none;
+      margin:0;
+      padding:0 0 20px 0;
+      }
+      li {
+      display: inline-block;
+      }
+      div.info {
+      margin: auto;
+      width: 800px;
+      text-align: center;
+      background-color: #ccc;
+      border: 10px solid #eee;
+      \-moz-border-radius: 10px;
+      \-webkit-border-radius: 10px;
+      \-o-border-radius: 10px;
+      \-ms-border-radius: 10px;
+      \-khtml-border-radius: 10px;
+      border-radius: 10px;
+      \-moz-box-shadow: #cccccc 0 0 10px 0;
+      \-webkit-box-shadow: #cccccc 0 0 10px 0;
+      \-o-box-shadow: #cccccc 0 0 10px 0;
+      box-shadow: #cccccc 0 0 10px 0;
+      }
+      div.code {
+      margin: 2em;
+      text-align: left;
+      }
+      div.img {
+      background: #fff repeat-y 0 0;
+      height: 100px;
+      width: 100px;
+      margin: 10px
+      }
+      div.a{
+      background-image: url(#{a.to_s}.png);
+      }
+      div.b{
+      background-image: url(#{b.to_s}.png);
+      }
+      div.c{
+      background-image: url(#{c.to_s}.png);
+      }
+  %body
+    %div.info
+      %h1 Demonstration of the Cicada Principle
+      %p
+        %em See '<a href="http://designfestival.com/the-cicada-principle-and-why-it-matters-to-web-designers/">The Cicada Principle and Why It Matters to Web Designers</a>' by <a href="http://designfestival.com/author/alex-walker/">Alex Walker</a>.
+      %p
+        <a href="/">Refresh</a> this page to see a different example.
+      %h2 HTML
+      %div.code
+        <pre>
+        <code>
+        \&lt;html&gt;
+        \  &lt;head&gt;
+        \    &lt;style&gt;
+        \      html {
+        \        background-color: transparent;
+        \        background-image: url(a.png), url(b.png), url(c.png);
+        \        background-size: auto, auto, auto;
+        \        padding: 0;
+        \        margin: 0;
+        \        height: 100%;
+        \      }
+        \    &lt;/style&gt;
+        \  &lt;/head&gt;
+        \  &lt;body&gt;
+        \  &lt;/body&gt;
+        \&lt;/html&gt;
+        </code>
+        </pre>
+      %h2 Images
+      %ul
+        %li{ :class => 'first odd' }
+          %div.img.a
+          %a{ :href => "/#{a.to_s}.png" } a.png
+        %li{ :class => 'even' }
+          %div.img.b
+          %a{ :href => "/#{b.to_s}.png" } b.png
+        %li{ :class => 'last odd' }
+          %div.img.c
+          %a{ :href => "/#{c.to_s}.png" } c.png
+      %p
+        Brought to you by <a href="http://accuser.cc/">AccUser</a> and <a href="http://heroku.com">Heroku</a>.
