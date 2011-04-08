@@ -1,0 +1,1 @@
+This is a demonstration of the cicada principle. For more details, see [The Cicada Principle and Why It Matters to Web Designers](http://designfestival.com/the-cicada-principle-and-why-it-matters-to-web-designers/) by [Alex Walker](http://designfestival.com/author/alex-walker/).
